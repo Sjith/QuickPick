@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,14 +19,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 	}
  	
  	public void getNumbers(View view) {
  		Intent intent = new Intent(this, DisplayNumbers.class);
  		String numbers = "Numbers: " + getListOfNumbers() + " " + "Powerball: " + power();
- 		EditText editText = (EditText) findViewById(R.id.numTickets);
-		intent.putExtra(EXTRA_NUMBERS, numbers);
+ 		intent.putExtra(EXTRA_NUMBERS, numbers);
 		startActivity(intent);
  	}
 
@@ -41,7 +39,7 @@ public class MainActivity extends Activity {
 	// Generate the list of random numbers (five random numbers between 1 and 59 inclusive)
 	private static String getListOfNumbers() {
 		List<Integer> numbers = new ArrayList<Integer>();
-		
+
 		while (numbers.size() != 5) {
 			int randNum = getRandomNumber(1,59);
 

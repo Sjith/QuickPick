@@ -4,53 +4,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/editText1"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="94dp"
+        android:onClick="getNumbers"
+        android:text="@string/generate" />
+
+    <EditText
+        android:id="@+id/numTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:ems="10"
-        android:fontFamily="Roboto"
-        android:gravity="center"
-        android:text="@string/intro"
-        android:textSize="16sp" />
+        android:hint="@string/max"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
 
     <TextView
-        android:id="@+id/editText1"
+        android:id="@+id/ask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/numTickets"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="116dp"
+        android:layout_marginBottom="23dp"
         android:ems="10"
         android:fontFamily="Roboto"
         android:gravity="center"
         android:text="@string/tickets"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/numTickets"
+    <TextView
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="35dp"
         android:ems="10"
-        android:inputType="number"
-        android:hint="@string/max" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp"
-        android:onClick="getNumbers"
-        android:text="@string/generate" />
+        android:fontFamily="Roboto"
+        android:gravity="center"
+        android:text="@string/intro"
+        android:textSize="16sp" />
 
 </RelativeLayout>
