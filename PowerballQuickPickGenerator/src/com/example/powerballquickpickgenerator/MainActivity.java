@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,7 +14,8 @@ import java.util.Random;
 public class MainActivity extends Activity {
 
 	private static final boolean False = false;
-	static final String EXTRA_NUMBERS = "com.example.PowerBallQuickPickGenerator.NUMBERS";
+	static final String EXTRA_NUMBER = "com.example.PowerBallQuickPickGenerator.NUMBER";
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity extends Activity {
  	
  	public void getNumbers(View view) {
  		Intent intent = new Intent(this, DisplayNumbers.class);
+ 		EditText editText = (EditText) findViewById(R.id.numTickets);
+ 		String tickets = editText.getText().toString();
+		intent.putExtra(EXTRA_NUMBER, tickets);
 		startActivity(intent);
  	}
 
